@@ -19,7 +19,7 @@
                     options.success = function(data, textStatus, jqXHR) {
                         if (data.Success) {
                             let itemId = data.Guid;
-                            state = saveItem(itemId);
+                            state = saveItem(itemId, merchantID);
                         }
                         if (typeof(success) === "function" && state) return success(data, textStatus, jqXHR);
                     };
@@ -36,7 +36,7 @@
             $.ajax(settings).done(function (response) {
                 var item_list = response.Records;
                 item_list.forEach(element => {
-                    if(element.status == 0){
+                    if(element.status == 0 && element.merchant == merchantID){
                         var sync_item_id = element.item;
                         var row_id = element.Id;
                         action(sync_item_id, row_id);
@@ -45,7 +45,7 @@
             });
         }
 
-        function saveItem(id){
+        function saveItem(id, merchant){
             var status = false;
 
             var settings = {
@@ -71,7 +71,7 @@
                 "headers": {
                     "Content-Type": "application/json"
                 },
-                "data": JSON.stringify({"item":id, "status": 0}),
+                "data": JSON.stringify({"item":id, "status": 0, "merchant": merchant}),
             };
 
             $.ajax(cache_settings);
