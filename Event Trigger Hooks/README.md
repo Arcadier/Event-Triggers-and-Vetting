@@ -33,7 +33,7 @@ To access the Event Trigger Hooks Tool:
 
 ## 1. Invoice - invoice.paid
 
-    The JSON data below is the complete structure of the basic information that will be `POST`ed to your webhook.
+The JSON data below is the complete structure of the basic information that will be `POST`ed to your webhook.
      
     ```json
     "Action": "invoice.paid",
