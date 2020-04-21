@@ -1,30 +1,36 @@
-# Event Trigger Hooks
+Event Trigger Hooks
+===================
 
-#### How to access
+* [How to access]()
+* [Connecting webhooks to Arcadier's event triggers]()
+* [Payload Samples]()
+
+# How to access
 To access the Event Trigger Hooks Tool:
 1. Login to your marketplace's admin portal
 2. Navigate to `https://{your-marketplace}/admin/event-triggers/index`
 
-#### Creating the Events
-1. Click on `Add new Event`.
+# Connecting webhooks to Arcadier's event triggers
+## 1. Click on `Add new Event`.
 
 <p align="center"><img src="https://bootstrap.arcadier.com/github/add_new_event.png"></p>
 
-2. Choose the event which will trigger **your** webhook.
+## 2. Choose the event which will trigger **your** webhook.
     * Click on "Select Event"
     * Choose the event
     
 <p align="center"><img src="https://bootstrap.arcadier.com/github/select%20event.png"></p>
 
-3. Copy & Paste your webhook URL in the `URI` input field.
+## 3. Copy & Paste your webhook URL in the `URI` input field.
 
 <p align="center"><img src="https://bootstrap.arcadier.com/github/ADD_HOOK%20URI.png"></p>
 
-4. Save
+## 4. Save
 
-#### Payload Samples
+==================
+# Payload Samples
 
-1. Invoice - invoice.paid
+## 1. Invoice - invoice.paid
 
     The JSON data below is the complete structure of the basic information that will be `POST`ed to your webhook.
      
