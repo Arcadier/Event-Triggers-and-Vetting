@@ -28,6 +28,8 @@ To access the Event Trigger Hooks Tool:
 
 ## 4. Save
 
+<p align="center" style="font-size: 1.5em; color:green;"> Note: Mulitple events <strong>can</strong> be connected to a single webhook URI.</p>
+
 ==================
 # Payload Samples
 
