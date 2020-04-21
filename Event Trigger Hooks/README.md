@@ -1,0 +1,139 @@
+# Event Trigger Hooks
+
+#### How to access
+To access the Event Trigger Hooks Tool:
+1. Login to your marketplace's admin portal
+2. Navigate to `https://{your-marketplace}/admin/event-triggers/index`
+
+#### Creating the Events
+1. Click on `Add new Event`.
+
+(image)
+
+2. Choose the event which will trigger **your** webhook.
+
+(image)
+
+3. Copy & Paste your webhook URL in the `URI` input field.
+
+(image)
+
+4. Save
+
+#### Payload Samples
+
+1. Invoice - invoice.paid
+
+    The JSON data below is the complete structure of the basic information that will be `POST`ed to your webhook.
+     
+    ```json
+    "Action": "invoice.paid",
+    "ID": "evt-81303e42-e259-4752-8b37-7db8f36d52c6",
+    "CreatedDateTime": 1587448975,
+    "Data": {
+        "InvoiceNo": "SAMPLE1587448949BHBI",
+        "CurrencyCode": "SGD",
+        "Total": 1000,
+        "Fee": 0,
+        "Orders": [
+            {
+                "ID": "941a823c-5368-4f22-92fc-43548fc4f2da",
+                "CurrencyCode": "SGD",
+                "Total": 1000,
+                "Freight": 0,
+                "GrandTotal": 1000,
+                "Balance": 0,
+                "DiscountAmount": 0,
+                "MerchantDetail": {
+                    "ID": "9091f4f7-ce53-4e1f-8d82-ec39b5d12c71",
+                    "Email": "johnsmith@arcadier.com",
+                    "FirstName": "John",
+                    "LastName": "Smith",
+                    "DisplayName": "Johnny",
+                    "PhoneNumber": "11223344",
+                    "DateJoined": 1586847238,
+                    "LanguageCode": "en"
+                },
+                "ConsumerDetail": {
+                    "ID": "1d6cabad-08de-4450-aac2-60e93b49d0b9",
+                    "Email": "alice@arcadier.com",
+                    "FirstName": "Alice",
+                    "LastName": "Smith",
+                    "DisplayName": "",
+                    "PhoneNumber": "22334455",
+                    "DateJoined": 1586848955,
+                    "LanguageCode": "en"
+                },
+                "PaymentDetails": [
+                    {
+                        "InvoiceNo": "SAMPLED1587448949BHBI",
+                        "Payer": {
+                            "ID": "1d6cabad-08de-4450-aac2-60e93b49d0b9"
+                        },
+                        "Payee": {
+                            "ID": "9091f4f7-ce53-4e1f-8d82-ec39b5d12c71",
+                            "Email": "johnsmith@arcadier.com",
+                            "FirstName": "John",
+                            "LastName": "Smith",
+                            "PhoneNumber": "11223344"
+                        },
+                        "Order": {
+                            "ID": "941a823c-5368-4f22-92fc-43548fc4f2da"
+                        },
+                        "CurrencyCode": "SGD",
+                        "Total": 1000,
+                        "Fee": 0,
+                        "Status": "Success",
+                        "Refunded": false,
+                        "GatewayPayKey": "ch_test_key",
+                        "GatewayTransactionID": "ch_test_transaction_ID",
+                        "GatewayStatus": "succeeded",
+                        "GatewayTimeStamp": 1587448971,
+                        "GatewayRef": "ch_test_ref",
+                        "GatewaySenderId": "cus_test_sender_ID",
+                        "GatewayReceiverId": "acct_test_account",
+                        "Gateway": {
+                            "Code": "stripe",
+                            "Gateway": "Stripe"
+                        },
+                        "DateTimeCreated": 1587448949,
+                        "DateTimePaid": 1587448974
+                    }
+                ],
+                "DeliveryFromAddress": {
+                    "ID": "bc0d5b75-3ebe-49ef-afbf-942d8774af8e",
+                    "Name": "John Smith",
+                    "Line1": "34 Boon Leat Terrace",
+                    "Line2": "Singapore",
+                    "PostCode": "119866",
+                    "Latitude": 0,
+                    "Longitude": 0,
+                    "Delivery": true,
+                    "Pickup": false,
+                    "State": "Singapore",
+                    "City": "Singapore",
+                    "Country": "Singapore",
+                    "CountryCode": "SG"
+                },
+                "DeliveryToAddress": {
+                    "ID": "11232227-ffeb-4cdf-b2c9-f4392c309916",
+                    "Name": "Alice Smith",
+                    "Line1": "34 Boon Leat Terrace",
+                    "PostCode": "119866",
+                    "Latitude": 0,
+                    "Longitude": 0,
+                    "Delivery": true,
+                    "Pickup": false,
+                    "State": "Singapore",
+                    "City": "Singapore",
+                    "Country": "Singapore",
+                    "CountryCode": "SG"
+                },
+                "FulfilmentStatus": "Acknowledged",
+                "PaymentStatus": "Paid",
+                "CreatedDateTime": 1587448919
+            }
+            ]
+        }
+    }
+    ```
