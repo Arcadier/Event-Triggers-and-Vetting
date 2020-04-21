@@ -1,9 +1,10 @@
 Event Trigger Hooks
 ===================
 
-* [How to access]()
-* [Connecting webhooks to Arcadier's event triggers]()
-* [Payload Samples]()
+* [How to access](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
+* [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
+* [Payload Samples](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
+    * [invoice.paid](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
 
 # How to access
 To access the Event Trigger Hooks Tool:
