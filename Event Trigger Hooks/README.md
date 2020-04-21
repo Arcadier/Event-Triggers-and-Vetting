@@ -83,7 +83,7 @@ The JSON data below is the complete structure of the basic information that will
                 },
                 "PaymentDetails": [
                     {
-                        "InvoiceNo": "SAMPLED1587448949BHBI",
+                        "InvoiceNo": "SAMPLE1587448949BHBI",
                         "Payer": {
                             "ID": "1d6cabad-08de-4450-aac2-60e93b49d0b9"
                         },
