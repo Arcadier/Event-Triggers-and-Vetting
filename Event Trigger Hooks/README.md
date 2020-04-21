@@ -8,15 +8,17 @@ To access the Event Trigger Hooks Tool:
 #### Creating the Events
 1. Click on `Add new Event`.
 
-(image)
+<p align="center"><img src="https://bootstrap.arcadier.com/github/add_new_event.png"></p>
 
 2. Choose the event which will trigger **your** webhook.
-
-(image)
+    * Click on "Select Event"
+    * Choose the event
+    
+<p align="center"><img src="https://bootstrap.arcadier.com/github/select%20event.png"></p>
 
 3. Copy & Paste your webhook URL in the `URI` input field.
 
-(image)
+<p align="center"><img src="https://bootstrap.arcadier.com/github/ADD_HOOK%20URI.png"></p>
 
 4. Save
 
