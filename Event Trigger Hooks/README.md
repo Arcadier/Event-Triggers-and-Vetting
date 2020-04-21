@@ -32,7 +32,14 @@ To access the Event Trigger Hooks Tool:
 # Payload Samples
 
 ## 1. Invoice - invoice.paid
+#### Trigger 
+* A successful checkout made using a payment gateway that has been set up using a generic payment method.
 
+Or
+
+* The merchant setting their Delivery Status to "Delivered" on the merchant portal.
+
+#### Payload
 The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
      
 ```json
