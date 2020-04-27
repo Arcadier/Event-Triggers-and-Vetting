@@ -1,10 +1,10 @@
-Event Triggers and Vetting
+Webhooks, Event Triggers and Vetting
 ==========================
 
-## Event Trigger Hooks
+## (Core) Event Trigger Hooks
 Connect your webhooks to specific events via the our [`Event Trigger`](https://github.com/Arcadier/Event-Triggers-and-Vetting/tree/master/Event%20Trigger%20Hooks) tool accessible from your marketplace's admin portal.
 
-## (Front-End) Event Triggers:
+## JS Custom Triggers:
 * Category Creation - Script triggered on Admin Portal
 * Category Deletion - Script triggered on Admin Portal
 * Item Creation - Script triggered on Merchant Portal

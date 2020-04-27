@@ -1,4 +1,4 @@
-Event Trigger Hooks
+(Core) Event Trigger Hooks
 ===================
 
 * [How to access](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
