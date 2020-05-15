@@ -5,7 +5,7 @@
 * [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
 * [Payload Samples](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
     * [invoice.paid](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
-    * cart.added
+    * [cart.added]()
 
 # How to access
 To access the Event Trigger Hooks Tool:
@@ -34,7 +34,7 @@ To access the Event Trigger Hooks Tool:
 ==================
 # Payload Samples
 
-## 1. Invoice - invoice.paid
+## 1. Invoice.paid
 #### Trigger 
 * A successful checkout made using a payment gateway that has been set up using a generic payment method.
 
@@ -347,7 +347,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 6. Deleted a category
+## 7. Deleted a category
 #### Trigger 
 * A successful call with the following API: [Delete category](https://apiv2.arcadier.com/?version=latest#1b018490-9fd3-4a5c-a0c0-cdc8cf4e3a26).
 
@@ -378,7 +378,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 7. Update Shipping/Delivery Method
+## 8. Update Shipping/Delivery Method
 #### Trigger 
 * A successful call with the following API: [Upadate a shipping method](https://apiv2.arcadier.com/?version=latest#7d84b771-82cb-408c-9022-f64d82f9727c).
 
@@ -402,7 +402,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 7. Delete Shipping/Delivery Method
+## 9. Delete Shipping/Delivery Method
 #### Trigger 
 * A successful call with the following API: [Delete a shipping method](https://apiv2.arcadier.com/?version=latest#4605142d-4f7b-4eea-91b1-223c3d8c1d90).
 
