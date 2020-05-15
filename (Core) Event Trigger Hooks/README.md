@@ -5,6 +5,7 @@
 * [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
 * [Payload Samples](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
     * [invoice.paid](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
+    * cart.added
 
 # How to access
 To access the Event Trigger Hooks Tool:
@@ -156,4 +157,270 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 
+```
+## 2. Added an item to cart
+#### Trigger 
+* A successful call with the following API: [Add Item to Cart](https://apiv2.arcadier.com/?version=latest#687e81a0-6580-4db9-9885-516ec887b500).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "cart.added",
+    "ID": "evt-e8016c8b-5b32-4eff-80e2-703e2bb383c6",
+    "CreatedDateTime": 1589530150,
+    "Data": {
+        "ID": "bca2530c-7416-4722-bbf2-d76ae5fdcc8f",
+        "Quantity": "1",
+        "CurrencyCode": "SGD",
+        "SubTotal": 23,
+        "AddOns": [],
+        "ItemDetail": {
+            "Variants": [],
+            "ID": "4c255671-9a58-43e2-8231-638ba5d2f346",
+            "SKU": "233",
+            "Name": "Dress",
+            "BuyerDescription": "Test",
+            "Price": 23,
+            "StockLimited": false,
+            "StockQuantity": "0",
+            "IsVisibleToCustomer": true,
+            "Active": true,
+            "IsAvailable": true,
+            "CurrencyCode": "SGD",
+            "Media": [
+                {
+                "MediaUrl": "/item-19574-637243540711785723-mN9KML.jpg"
+                }
+            ],
+            "HasChildItems": false
+        },
+        "Statuses": []
+    }
+}
+```
+
+## 3. Edited an item in a cart
+#### Trigger 
+* A successful call with the following API: [Update item in Cart](https://apiv2.arcadier.com/?version=latest#0f0df34b-2ec6-402a-8106-20092f3a7932).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "cart.updated",
+    "ID": "evt-e8016c8b-5b32-4eff-80e2-703e2bb383c6",
+    "CreatedDateTime": 1589530150,
+    "Data": {
+        "ID": "bca2530c-7416-4722-bbf2-d76ae5fdcc8f",
+        "Quantity": "3",
+        "CurrencyCode": "SGD",
+        "SubTotal": 23,
+        "AddOns": [],
+        "ItemDetail": {
+            "Variants": [],
+            "ID": "4c255671-9a58-43e2-8231-638ba5d2f346",
+            "SKU": "233",
+            "Name": "Dress",
+            "BuyerDescription": "Test",
+            "Price": 23,
+            "StockLimited": false,
+            "StockQuantity": "0",
+            "IsVisibleToCustomer": true,
+            "Active": true,
+            "IsAvailable": true,
+            "CurrencyCode": "SGD",
+            "Media": [
+                {
+                "MediaUrl": "/item-19574-637243540711785723-mN9KML.jpg"
+                }
+            ],
+            "HasChildItems": false
+        },
+        "Statuses": []
+    }
+}
+```
+
+## 4. Deleted an item from a cart
+#### Trigger 
+* A successful call with the following API: [Delete item in Cart](https://apiv2.arcadier.com/?version=latest#f7fc984c-b492-4622-85ce-5646d1dc756d).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "cart.deleted",
+    "ID": "evt-e8016c8b-5b32-4eff-80e2-703e2bb383c6",
+    "CreatedDateTime": 1589530150,
+    "Data": {
+        "ID": "bca2530c-7416-4722-bbf2-d76ae5fdcc8f",
+        "Quantity": "3",
+        "CurrencyCode": "SGD",
+        "SubTotal": 23,
+        "AddOns": [],
+        "ItemDetail": {
+            "Variants": [],
+            "ID": "4c255671-9a58-43e2-8231-638ba5d2f346",
+            "SKU": "233",
+            "Name": "Dress",
+            "BuyerDescription": "Test",
+            "Price": 23,
+            "StockLimited": false,
+            "StockQuantity": "0",
+            "IsVisibleToCustomer": true,
+            "Active": true,
+            "IsAvailable": true,
+            "CurrencyCode": "SGD",
+            "Media": [
+                {
+                "MediaUrl": "/item-19574-637243540711785723-mN9KML.jpg"
+                }
+            ],
+            "HasChildItems": false
+        },
+        "Statuses": []
+    }
+}
+```
+## 5. Created a category
+#### Trigger 
+* A successful call with the following API: [Create category](https://apiv2.arcadier.com/?version=latest#be380e46-ec4b-4d2d-8a5f-ba2715ba1173).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "category.created",
+    "ID": "evt-10b00701-7f90-463f-88c7-cf7ad4421946",
+    "CreatedDateTime": 1589531575,
+    "Data": {
+        "ID": 8339,
+        "Guid": "5569dad9-906a-4d8f-bd76-9ce744262c14",
+        "UserID": 19521,
+        "Name": "Bass Guitars",
+        "Description": "4 string Guitars",
+        "SortOrder": 0,
+        "Media": [
+            {
+            "MediaUrl": "https://cdn.pixabay.com/photo/2016/12/14/12/09/violin-1906127_960_720.jpg"
+            }
+        ],
+        "CreatedDateTime": 1589531575,
+        "ModifiedDateTime": 1589531575,
+        "Active": true
+    }
+}
+```
+## 6. Updated a category
+#### Trigger 
+* A successful call with the following API: [Update category](https://apiv2.arcadier.com/?version=latest#8b562c45-5d49-4c49-b24f-64becb20fe9c).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "category.updated",
+    "ID": "evt-c633c86f-35a3-4856-94b5-1bb43d6c6fa2",
+    "CreatedDateTime": 1589531575,
+    "Data": {
+        "ID": 8339,
+        "Guid": "5569dad9-906a-4d8f-bd76-9ce744262c14",
+        "UserID": 19521,
+        "Name": "Bass Guitars",
+        "Description": "4 string Guitars",
+        "SortOrder": 0,
+        "Media": [
+            {
+            "MediaUrl": "https://cdn.pixabay.com/photo/2016/12/14/12/09/violin-1906127_960_720.jpg"
+            }
+        ],
+        "CreatedDateTime": 1589531575,
+        "ModifiedDateTime": 1589531575,
+        "Active": true
+    }
+}
+```
+
+## 6. Deleted a category
+#### Trigger 
+* A successful call with the following API: [Delete category](https://apiv2.arcadier.com/?version=latest#1b018490-9fd3-4a5c-a0c0-cdc8cf4e3a26).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "category.deleted",
+    "ID": "evt-5f9c14c7-8f7d-4ca2-8532-c4e9f9af6893",
+    "CreatedDateTime": 1589531575,
+    "Data": {
+        "ID": 8339,
+        "Guid": "5569dad9-906a-4d8f-bd76-9ce744262c14",
+        "UserID": 19521,
+        "Name": "Bass Guitars",
+        "Description": "4 string Guitars",
+        "SortOrder": 0,
+        "Media": [
+            {
+            "MediaUrl": "https://cdn.pixabay.com/photo/2016/12/14/12/09/violin-1906127_960_720.jpg"
+            }
+        ],
+        "CreatedDateTime": 1589531575,
+        "ModifiedDateTime": 1589531575,
+        "Active": true
+    }
+}
+```
+
+## 7. Update Shipping/Delivery Method
+#### Trigger 
+* A successful call with the following API: [Upadate a shipping method](https://apiv2.arcadier.com/?version=latest#7d84b771-82cb-408c-9022-f64d82f9727c).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+  "Action": "shippingmethod.updated",
+  "ID": "evt-78a86abe-a651-4edd-bf2f-573857a2e140",
+  "CreatedDateTime": 1589534087,
+  "Data": {
+    "ID": "e3dfab89-da09-4a6a-9528-c2be5c18192b",
+    "Courier": "Tanoo",
+    "Method": "Anything",
+    "Price": 5,
+    "CombinedPrice": 7,
+    "CurrencyCode": "SGD",
+    "Description": "I dare you, I double dare you"
+  }
+}
+```
+
+## 7. Delete Shipping/Delivery Method
+#### Trigger 
+* A successful call with the following API: [Delete a shipping method](https://apiv2.arcadier.com/?version=latest#4605142d-4f7b-4eea-91b1-223c3d8c1d90).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "shippingmethod.deleted",
+    "ID": "evt-b81ad7cb-9e87-49a2-9067-7c444ce45bd0",
+    "CreatedDateTime": 1589533463,
+    "Data": {
+        "ID": "3dbf842b-bc5e-496c-a456-c95bb434e47a",
+        "Courier": "Demo Shipping",
+        "Method": "Anything",
+        "Price": 3,
+        "CombinedPrice": 2,
+        "CurrencyCode": "SGD"
+    }
+}
 ```
