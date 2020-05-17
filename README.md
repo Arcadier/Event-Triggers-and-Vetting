@@ -2,7 +2,7 @@ Webhooks, Event Triggers and Vetting
 ==========================
 
 ## Event Triggers (API)
-Each time a specific Arcadier API is called, a `POST` request can be sent to your webhook with a payload containing relevant information about the event. More details [here](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks).
+Each time a specific Arcadier API is called, a `POST` request can be sent to your webhook with a payload containing relevant information about the event. More details [here](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks).
 
 ## JS Custom Triggers (non-API):
 For "non-API call" events, custom triggers can be created to detect events that happen on Arcadier's front-end. Here are some examples with sample code:
