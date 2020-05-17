@@ -1,8 +1,8 @@
 Event Triggers (API triggered)
 ===================
 
-* [How to access](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
-* [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
+* [How to access](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#how-to-access)
+* [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#connecting-webhooks-to-arcadiers-event-triggers)
 * Events, Triggering APIs & Payload Samples
     * Invoices
         * [invoice.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#invoice-is-created)
