@@ -17,7 +17,7 @@
     * Categories
         * [category.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#created-a-category)
         * [category.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#updated-a-category)
-        * [category.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#7-deleted-a-category)
+        * [category.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#deleted-a-category)
     * Shipping/Delivery Methods
         * [shippingmethod.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#update-shippingdelivery-method)
         * [shippingmethod.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#delete-shippingdelivery-method)
