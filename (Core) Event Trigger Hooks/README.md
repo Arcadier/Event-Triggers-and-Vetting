@@ -1,9 +1,9 @@
-(Core) Event Trigger Hooks
+Event Triggers (API triggered)
 ===================
 
 * [How to access](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
 * [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
-* Events & Payload Samples
+* Events, Triggering APIs & Payload Samples
     * Invoices
         * [invoice.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#invoice-is-created)
         * [invoice.paid](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#invoice-is-paid-for)
@@ -26,6 +26,7 @@
         )
         * [item.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#updated-an-item)
         * [item.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#deleted-an-item)
+        
 # How to access
 To access the Event Trigger Hooks Tool:
 1. Login to your marketplace's admin portal
