@@ -64,7 +64,7 @@ The JSON data below is the complete structure of the basic information that will
     "Data": "TANOO1589535749P9YX"
 }
 ```
-     
+---   
 
 ## Invoice is paid for
 #### Trigger 
@@ -189,6 +189,7 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
+---
 
 ## Order is created
 #### Trigger 
@@ -327,6 +328,7 @@ The JSON data below is the complete structure of the basic information that will
   ]
 }
 ```
+---
 
 ## Order is updated
 #### Trigger 
@@ -354,7 +356,7 @@ The JSON data below is the complete structure of the basic information that will
     ]
 }
 ```
-
+---
 
 ## Added an item to cart
 #### Trigger 
@@ -398,6 +400,7 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
+---
 
 ## Edited an item in a cart
 #### Trigger 
@@ -441,6 +444,7 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
+---
 
 ## Deleted an item from a cart
 #### Trigger 
@@ -484,6 +488,9 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
+
+---
+
 ## Created a category
 #### Trigger 
 * A successful call with the following API: [Create category](https://apiv2.arcadier.com/?version=latest#be380e46-ec4b-4d2d-8a5f-ba2715ba1173).
@@ -514,6 +521,9 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
+
+---
+
 ## Updated a category
 #### Trigger 
 * A successful call with the following API: [Update category](https://apiv2.arcadier.com/?version=latest#8b562c45-5d49-4c49-b24f-64becb20fe9c).
@@ -544,8 +554,7 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
-
-===
+---
 
 ##Deleted a category
 #### Trigger 
@@ -577,6 +586,8 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
+---
+
 
 ## Update Shipping/Delivery Method
 #### Trigger 
@@ -602,6 +613,9 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
+---
+
+
 ## Delete Shipping/Delivery Method
 #### Trigger 
 * A successful call with the following API: [Delete a shipping method](https://apiv2.arcadier.com/?version=latest#4605142d-4f7b-4eea-91b1-223c3d8c1d90).
@@ -625,6 +639,8 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
+---
+
 ## Created an item
 #### Trigger 
 * A successful call with the following API: [Create Item](https://apiv2.arcadier.com/?version=latest#03d18078-0f46-4c84-b9ff-c464c7853580).
@@ -647,6 +663,8 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
+---
+
 ## Updated an item
 #### Trigger 
 * A successful call with the following API: [Edit Item](https://apiv2.arcadier.com/?version=latest#8af9bf27-a3fb-4623-b8d0-f53a67697c47).
@@ -668,3 +686,26 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
+---
+## Deleted an item
+#### Trigger 
+* A successful call with the following API: [Delete Item](https://apiv2.arcadier.com/?version=latest#feb0149f-a7e8-429b-bb27-181e5e325e35).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "item.updated",
+    "ID": "evt-30f22cab-1121-49cf-b3c7-b72a999e444c",
+    "CreatedDateTime": 1589732811,
+    "Data": {
+        "ID": "257dee35-494b-4001-8be7-8287ad4de78a",
+        "MerchantDetail": {
+            "ID": "02ec5b74-ecc2-4c9c-9048-dbfc9de419ba"
+        },
+        "HasChildItems": false
+    }
+}
+```
+---
