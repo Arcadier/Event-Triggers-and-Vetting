@@ -6,7 +6,7 @@
 * [Events & Payload Samples](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
     * Invoices
         * [invoice.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#1-invoice-is-created)
-        * [invoice.paid](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
+        * [invoice.paid](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#1-invoice-is-created)
     * Orders
         * [order.created]()
     * Carts
@@ -326,6 +326,35 @@ The JSON data below is the complete structure of the basic information that will
   ]
 }
 ```
+
+## 4. Order is updated
+#### Trigger 
+* A successful call with the following API: [Admin - Edit Several Orders](https://apiv2.arcadier.com/?version=latest#02990d95-cb5f-4040-9965-a88bcb342c1c) **or** [Merchant - Edit Order Details](https://apiv2.arcadier.com/?version=latest#5b14eb44-8967-480e-82ea-166378754b2b)
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+     
+```json
+{
+    "Action": "order.updated",
+    "ID": "evt-7c36be72-7d81-4723-82c2-72bbe7fcc178",
+    "CreatedDateTime": 1589717533,
+    "Data": [
+        {
+            "ID": "8626cd3d-301f-4256-9e7d-2d533e2cf70b",
+            "MerchantDetail": {
+                "ID": "02ec5b74-ecc2-4c9c-9048-dbfc9de419ba"
+            },
+            "ConsumerDetail": {
+                "ID": "8e14be10-cc6f-4676-9aa7-57a2cfd728f3"
+            },
+            "FulfilmentStatus": "Acknowledged"
+        }
+    ]
+}
+```
+
+
 ## 2. Added an item to cart
 #### Trigger 
 * A successful call with the following API: [Add Item to Cart](https://apiv2.arcadier.com/?version=latest#687e81a0-6580-4db9-9885-516ec887b500).
