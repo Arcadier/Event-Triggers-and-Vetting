@@ -21,7 +21,11 @@
     * Shipping/Delivery Methods
         * [shippingmethod.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#8-update-shippingdelivery-method)
         * [shippingmethod.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#9-delete-shippingdelivery-method)
-
+    * Items
+        * [item.added](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#created-an-item
+        )
+        * [item.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#updated-an-item)
+        * [item.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#deleted-an-item)
 # How to access
 To access the Event Trigger Hooks Tool:
 1. Login to your marketplace's admin portal
