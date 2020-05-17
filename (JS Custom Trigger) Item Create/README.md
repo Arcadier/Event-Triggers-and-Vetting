@@ -12,4 +12,4 @@ Custom Table name: cache
 * "status" - Integer
 * "merchant" - string
 
-You can add, change these names, but you'll have to edit the scripts accordingly.
+You can add names, or change these names, but you'll have to edit the scripts accordingly.
