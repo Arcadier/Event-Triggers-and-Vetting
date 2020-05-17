@@ -8,7 +8,8 @@
         * [invoice.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#1-invoice-is-created)
         * [invoice.paid](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#1-invoice-is-created)
     * Orders
-        * [order.created]()
+        * [order.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#3-order-is-created)
+        * [order.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#4-order-is-updated)
     * Carts
         * [cart.added](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#2-added-an-item-to-cart)
         * [cart.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#3-edited-an-item-in-a-cart)
@@ -48,7 +49,7 @@ To access the Event Trigger Hooks Tool:
 ==================
 # Payload Samples
 
-## 1. Invoice is created
+## Invoice is created
 #### Trigger 
 * A successful call with the following API: [Generate Invoice and Orders from Cart](https://apiv2.arcadier.com/?version=latest#4b0bc4da-201c-472e-8deb-1a2e1099f908)
 
@@ -65,7 +66,7 @@ The JSON data below is the complete structure of the basic information that will
 ```
      
 
-## 2. Invoice is paid for
+## Invoice is paid for
 #### Trigger 
 * A successful checkout made using a payment gateway that has been set up using a generic payment method.
 
@@ -189,7 +190,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 3. Order is created
+## Order is created
 #### Trigger 
 * A successful call with the following API: [Generate Invoice and Orders from Cart](https://apiv2.arcadier.com/?version=latest#4b0bc4da-201c-472e-8deb-1a2e1099f908)
 
@@ -327,7 +328,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 4. Order is updated
+## Order is updated
 #### Trigger 
 * A successful call with the following API: [Admin - Edit Several Orders](https://apiv2.arcadier.com/?version=latest#02990d95-cb5f-4040-9965-a88bcb342c1c) **or** [Merchant - Edit Order Details](https://apiv2.arcadier.com/?version=latest#5b14eb44-8967-480e-82ea-166378754b2b)
 
@@ -355,7 +356,7 @@ The JSON data below is the complete structure of the basic information that will
 ```
 
 
-## 2. Added an item to cart
+## Added an item to cart
 #### Trigger 
 * A successful call with the following API: [Add Item to Cart](https://apiv2.arcadier.com/?version=latest#687e81a0-6580-4db9-9885-516ec887b500).
 
@@ -398,7 +399,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 3. Edited an item in a cart
+## Edited an item in a cart
 #### Trigger 
 * A successful call with the following API: [Update item in Cart](https://apiv2.arcadier.com/?version=latest#0f0df34b-2ec6-402a-8106-20092f3a7932).
 
@@ -441,7 +442,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 4. Deleted an item from a cart
+## Deleted an item from a cart
 #### Trigger 
 * A successful call with the following API: [Delete item in Cart](https://apiv2.arcadier.com/?version=latest#f7fc984c-b492-4622-85ce-5646d1dc756d).
 
@@ -483,7 +484,7 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
-## 5. Created a category
+## Created a category
 #### Trigger 
 * A successful call with the following API: [Create category](https://apiv2.arcadier.com/?version=latest#be380e46-ec4b-4d2d-8a5f-ba2715ba1173).
 
@@ -513,7 +514,7 @@ The JSON data below is the complete structure of the basic information that will
     }
 }
 ```
-## 6. Updated a category
+## Updated a category
 #### Trigger 
 * A successful call with the following API: [Update category](https://apiv2.arcadier.com/?version=latest#8b562c45-5d49-4c49-b24f-64becb20fe9c).
 
@@ -544,7 +545,9 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 7. Deleted a category
+===
+
+##Deleted a category
 #### Trigger 
 * A successful call with the following API: [Delete category](https://apiv2.arcadier.com/?version=latest#1b018490-9fd3-4a5c-a0c0-cdc8cf4e3a26).
 
@@ -575,7 +578,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 8. Update Shipping/Delivery Method
+## Update Shipping/Delivery Method
 #### Trigger 
 * A successful call with the following API: [Upadate a shipping method](https://apiv2.arcadier.com/?version=latest#7d84b771-82cb-408c-9022-f64d82f9727c).
 
@@ -599,7 +602,7 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 
-## 9. Delete Shipping/Delivery Method
+## Delete Shipping/Delivery Method
 #### Trigger 
 * A successful call with the following API: [Delete a shipping method](https://apiv2.arcadier.com/?version=latest#4605142d-4f7b-4eea-91b1-223c3d8c1d90).
 
@@ -618,6 +621,50 @@ The JSON data below is the complete structure of the basic information that will
         "Price": 3,
         "CombinedPrice": 2,
         "CurrencyCode": "SGD"
+    }
+}
+```
+
+## Created an item
+#### Trigger 
+* A successful call with the following API: [Create Item](https://apiv2.arcadier.com/?version=latest#03d18078-0f46-4c84-b9ff-c464c7853580).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "item.added",
+    "ID": "evt-ec4285ca-d59b-404c-9f14-069a1c9ac9fb",
+    "CreatedDateTime": 1589732504,
+    "Data": {
+        "ID": "257dee35-494b-4001-8be7-8287ad4de78a",
+        "MerchantDetail": {
+            "ID": "02ec5b74-ecc2-4c9c-9048-dbfc9de419ba"
+        },
+        "HasChildItems": false
+    }
+}
+```
+
+## Updated an item
+#### Trigger 
+* A successful call with the following API: [Edit Item](https://apiv2.arcadier.com/?version=latest#8af9bf27-a3fb-4623-b8d0-f53a67697c47).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "item.updated",
+    "ID": "evt-30f22cab-1121-49cf-b3c7-b72a999e444c",
+    "CreatedDateTime": 1589732811,
+    "Data": {
+        "ID": "257dee35-494b-4001-8be7-8287ad4de78a",
+        "MerchantDetail": {
+            "ID": "02ec5b74-ecc2-4c9c-9048-dbfc9de419ba"
+        },
+        "HasChildItems": false
     }
 }
 ```
