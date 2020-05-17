@@ -7,6 +7,8 @@
     * Invoices
         * [invoice.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#1-invoice-is-created)
         * [invoice.paid](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
+    * Orders
+        * [order.created]()
     * Carts
         * [cart.added](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#2-added-an-item-to-cart)
         * [cart.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#3-edited-an-item-in-a-cart)
@@ -185,7 +187,144 @@ The JSON data below is the complete structure of the basic information that will
         ]
     }
 }
+```
 
+## 3. Order is created
+#### Trigger 
+* A successful call with the following API: [Generate Invoice and Orders from Cart](https://apiv2.arcadier.com/?version=latest#4b0bc4da-201c-472e-8deb-1a2e1099f908)
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+     
+```json
+{
+  "Action": "order.created",
+  "ID": "evt-6de7c2d5-0d7e-4848-bb79-d7a56a7a9592",
+  "CreatedDateTime": 1589535750,
+  "Data": [
+    {
+      "ID": "8626cd3d-301f-4256-9e7d-2d533e2cf70b",
+      "CurrencyCode": "SGD",
+      "Total": 200,
+      "Freight": 0,
+      "Surcharge": 0,
+      "Rounding": 0,
+      "GrandTotal": 200,
+      "DiscountAmount": 0,
+      "MerchantDetail": {
+        "ID": "02ec5b74-ecc2-4c9c-9048-dbfc9de419ba",
+        "Email": "tanoo_joy@hotmail.com",
+        "FirstName": "Tanoo",
+        "LastName": "Joyekurun",
+        "DisplayName": "Tanoo Seller",
+        "PhoneNumber": "90854839",
+        "DateJoined": 1566268209,
+        "LanguageCode": "en"
+      },
+      "ConsumerDetail": {
+        "ID": "8e14be10-cc6f-4676-9aa7-57a2cfd728f3",
+        "Email": "tanoo_joy@hotmail.com",
+        "FirstName": "Tanoo",
+        "LastName": "Joyekurun",
+        "DisplayName": "",
+        "PhoneNumber": "90854839",
+        "DateJoined": 1567064746,
+        "LanguageCode": "en"
+      },
+      "CartItemDetails": [
+        {
+          "ID": "bde41189-31a6-4e4b-a242-562489a95b83",
+          "Quantity": "1",
+          "CurrencyCode": "SGD",
+          "SubTotal": 200,
+          "OrderID": "8626cd3d-301f-4256-9e7d-2d533e2cf70b",
+          "AddOns": [],
+          "ItemDetail": {
+            "Variants": [],
+            "ID": "15ccfbe0-d799-4e4d-baf8-5fdc6ebd4a4b",
+            "SKU": "299",
+            "Name": "Webhook Test Dress",
+            "BuyerDescription": "Test",
+            "Price": 200,
+            "StockLimited": false,
+            "StockQuantity": "0",
+            "IsVisibleToCustomer": true,
+            "Active": true,
+            "IsAvailable": true,
+            "CurrencyCode": "SGD",
+            "HasChildItems": false
+          },
+          "Statuses": [
+            {
+              "Name": "Created",
+              "Type": "Fulfilment"
+            },
+            {
+              "Name": "Created",
+              "Type": "Order"
+            }
+          ]
+        }
+      ],
+      "PaymentDetails": [
+        {
+          "InvoiceNo": "TANOO1589535749P9YX",
+          "Payer": {
+            "ID": "8e14be10-cc6f-4676-9aa7-57a2cfd728f3"
+          },
+          "Payee": {
+            "ID": "02ec5b74-ecc2-4c9c-9048-dbfc9de419ba",
+            "Email": "tanoo_joy@hotmail.com",
+            "FirstName": "Tanoo",
+            "LastName": "Joyekurun",
+            "PhoneNumber": "90854839"
+          },
+          "CurrencyCode": "SGD",
+          "Total": 180,
+          "Fee": 20,
+          "Refunded": false,
+          "Gateway": {},
+          "DateTimeCreated": 1589535749
+        },
+        {
+          "InvoiceNo": "TANOO1589535749P9YX",
+          "Payer": {
+            "ID": "8e14be10-cc6f-4676-9aa7-57a2cfd728f3"
+          },
+          "Payee": {
+            "ID": "af6bf51d-426e-4a31-bcfc-1ecaf706b202",
+            "Email": "tanoo_joy@hotmail.com",
+            "FirstName": "TanooJoy",
+            "LastName": "Joyekurun",
+            "PhoneNumber": "11223344"
+          },
+          "CurrencyCode": "SGD",
+          "Total": 20,
+          "Fee": 0,
+          "Refunded": false,
+          "Gateway": {},
+          "DateTimeCreated": 1589535749
+        }
+      ],
+      "DeliveryFromAddress": {
+        "ID": "3da55667-34a8-454a-b0ca-3ba903cbaa5c",
+        "Name": "Christophe|Vidal",
+        "Line1": "32 Braddell Road #03-25",
+        "PostCode": "359967",
+        "Delivery": true,
+        "Pickup": false,
+        "City": "Singapore",
+        "Country": "Singapore",
+        "CountryCode": "SG"
+      },
+      "DeliveryToAddress": {},
+      "BillingToAddress": {},
+      "FulfilmentStatus": "Created",
+      "PaymentStatus": "Waiting For Payment",
+      "CreatedDateTime": 1589535749
+    }
+  ]
+}
 ```
 ## 2. Added an item to cart
 #### Trigger 
