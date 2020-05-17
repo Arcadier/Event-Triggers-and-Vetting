@@ -4,15 +4,19 @@
 * [How to access](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
 * [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#how-to-access)
 * [Payload Samples](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
-    * [invoice.paid](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
-    * [cart.added](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#2-added-an-item-to-cart)
-    * [cart.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#3-edited-an-item-in-a-cart)
-    * [cart.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#4-deleted-an-item-from-a-cart)
-    * [category.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#5-created-a-category)
-    * [category.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#6-updated-a-category)
-    * [category.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#7-deleted-a-category)
-    * [shippingmethod.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#8-update-shippingdelivery-method)
-    * [shippingmethod.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#9-delete-shippingdelivery-method)
+    * Invoice
+        * [invoice.created]()
+        * [invoice.paid](https://github.com/Arcadier/Event-Triggers-and-Vetting/blob/master/Event%20Trigger%20Hooks/README.md#payload-samples)
+    * Cart
+        * [cart.added](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#2-added-an-item-to-cart)
+        * [cart.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#3-edited-an-item-in-a-cart)
+        * [cart.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#4-deleted-an-item-from-a-cart)
+        * [category.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#5-created-a-category)
+        * [category.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#6-updated-a-category)
+        * [category.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#7-deleted-a-category)
+    * Shipping Method
+        * [shippingmethod.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#8-update-shippingdelivery-method)
+        * [shippingmethod.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(Core)%20Event%20Trigger%20Hooks#9-delete-shippingdelivery-method)
 
 # How to access
 To access the Event Trigger Hooks Tool:
@@ -41,7 +45,24 @@ To access the Event Trigger Hooks Tool:
 ==================
 # Payload Samples
 
-## 1. Invoice.paid
+## 1. Invoice is created
+#### Trigger 
+* A successful call with the following API: [Generate Invoice and Orders from Cart](https://apiv2.arcadier.com/?version=latest#4b0bc4da-201c-472e-8deb-1a2e1099f908)
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "invoice.created",
+    "ID": "evt-dc9324cf-ae78-4d9c-9d0a-785ea7390349",
+    "CreatedDateTime": 1589535750,
+    "Data": "TANOO1589535749P9YX"
+}
+```
+     
+
+## 2. Invoice is paid for
 #### Trigger 
 * A successful checkout made using a payment gateway that has been set up using a generic payment method.
 
