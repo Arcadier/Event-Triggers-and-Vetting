@@ -16,7 +16,7 @@ Possible use for these triggers - Vetting by admin:
 * Item Edit - Script triggered on Merchant Portal. Admin needs to approve recently edited items
 
 ### How to install custom triggers
-For example, if you want to install [Item Creation]() as a plug-in.
+For example, if you want to install [Item Creation](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(JS%20Custom%20Trigger)%20Item%20Create) as a plug-in.
 1. Download the repository 
 2. Extract all the content of the zip file
 3. In the resulting extracted folder, fo to `Item Creation` folder.
