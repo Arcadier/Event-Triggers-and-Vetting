@@ -31,8 +31,9 @@ Event Triggers (API triggered)
         * [user.updated]()
         * [user.deleted]()
     * User Address
-        * [user.address-created]()
-        * []()
+        * [user.address-created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-created)
+        * [user.address-updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-updated)
+        * [user.address-deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-deleted)
 
         
 # How to access
