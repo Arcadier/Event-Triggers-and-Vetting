@@ -26,6 +26,14 @@ Event Triggers (API triggered)
         )
         * [item.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#updated-an-item)
         * [item.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#deleted-an-item)
+    * Users
+        * [user.created]()
+        * [user.updated]()
+        * [user.deleted]()
+    * User Address
+        * [user.address-created]()
+        * []()
+
         
 # How to access
 To access the Event Trigger Hooks Tool:
@@ -714,3 +722,132 @@ The JSON data below is the complete structure of the basic information that will
 }
 ```
 ---
+
+## User is created
+#### Trigger 
+* A successful call with the following API: [Create User Account](https://apiv2.arcadier.com/?version=latest#0c2b1f7e-275b-4d79-8b7a-949a504a5ea3).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "user.created",
+    "ID": "evt-1c7e4549-2497-4d4f-be55-1dd0b2d30eec",
+    "CreatedDateTime": 1589789328,
+    "Data": {
+        "ID": "c164aa00-b834-4a37-ab36-30ece24e477b",
+        "Roles": [
+            "User"
+        ]
+    }
+}
+```
+---
+
+## User is updated
+#### Trigger 
+* A successful call with the following API: [Upgrade User Role](https://apiv2.arcadier.com/?version=latest#0c2b1f7e-275b-4d79-8b7a-949a504a5ea3) **or** [Update User Information](https://apiv2.arcadier.com/?version=latest#cac4e985-84f9-48fd-bd76-0cbc1850fc66).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "user.updated",
+    "ID": "evt-fc53c63c-822a-411d-aadb-d6d61b35fec9",
+    "CreatedDateTime": 1589790591,
+    "Data": {
+        "ID": "c164aa00-b834-4a37-ab36-30ece24e477b"
+    }
+}
+```
+---
+
+## User is Deleted
+#### Trigger 
+* A successful call with the following API: [Delete a User](https://apiv2.arcadier.com/?version=latest#688a1f91-40d6-4f52-9ecf-125630d81480).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "user.deleted",
+    "ID": "evt-ff1c8618-7089-4e41-b5bd-7c1ea81c6118",
+    "CreatedDateTime": 1589791074,
+    "Data": {
+        "ID": "c164aa00-b834-4a37-ab36-30ece24e477b"
+    }
+}
+```
+
+## User address is created
+#### Trigger 
+* A successful call with the following API: [Create a user Address](https://apiv2.arcadier.com/?version=latest#3d35d5ba-b2d6-4160-a60a-8f7d98887b99).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "user.address-created",
+    "ID": "evt-382d20d3-f09e-43cc-8efc-adee0b704242",
+    "CreatedDateTime": 1589792117,
+    "Data": {
+        "ID": "8a9621b2-1885-408d-aae6-6f681d47311c",
+        "Addresses": [
+            {
+                "ID": "ab473f66-f89c-4e9d-956b-5520c58f066a"
+            }
+        ]
+    }
+}
+```
+
+## User address is updated
+#### Trigger 
+* A successful call with the following API: [Update a user Address](https://apiv2.arcadier.com/?version=latest#f6ef750d-7c57-4742-bc37-b6d93b5c8757).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "user.address-updated",
+    "ID": "evt-3906eb07-4671-4976-b70b-2700ff533a25",
+    "CreatedDateTime": 1589792591,
+    "Data": {
+        "ID": "8a9621b2-1885-408d-aae6-6f681d47311c",
+        "Addresses": [
+            {
+                "ID": "ab473f66-f89c-4e9d-956b-5520c58f066a"
+            }
+        ]
+    }
+}
+```
+
+
+## User address is deleted
+#### Trigger 
+* A successful call with the following API: [Deleted a user Address](https://apiv2.arcadier.com/?version=latest#956999a1-92f2-4654-9583-1881ab2208ff).
+
+#### Payload
+The JSON data below is the complete structure of the basic information that will sent as a `POST` request to your webhook.
+
+```json
+{
+    "Action": "user.address-deleted",
+    "ID": "evt-248d593f-4bda-489d-a126-85ba25b864af",
+    "CreatedDateTime": 1589792820,
+    "Data": {
+        "ID": "8a9621b2-1885-408d-aae6-6f681d47311c",
+        "Addresses": [
+            {
+                "ID": "ab473f66-f89c-4e9d-956b-5520c58f066a"
+            }
+        ]
+    }
+}
+```
