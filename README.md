@@ -1,4 +1,4 @@
-Webhooks, Event Triggers and Vetting
+Webhooks & Event Triggers
 ==========================
 
 ## Event Triggers (API)
