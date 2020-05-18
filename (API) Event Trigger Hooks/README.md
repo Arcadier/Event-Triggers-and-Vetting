@@ -27,10 +27,10 @@ Event Triggers (API triggered)
         * [item.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#updated-an-item)
         * [item.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#deleted-an-item)
     * Users
-        * [user.created]()
-        * [user.updated]()
-        * [user.deleted]()
-    * User Address
+        * [user.created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-is-created)
+        * [user.updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-is-updated)
+        * [user.deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-is-deleted)
+    * User Addresses
         * [user.address-created](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-created)
         * [user.address-updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-updated)
         * [user.address-deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-deleted)
