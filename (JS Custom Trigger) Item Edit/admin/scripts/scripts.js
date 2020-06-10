@@ -68,7 +68,7 @@
                                   "Content-Type": "application/json",
                                   "Authorization": "Bearer "+token
                                 },
-                                "data": JSON.stringify({"From":adminemail,"To":merchantemail,"Body":"Your item "+itemname+" has been approved.", "Subject":"Your Item "+itemname+" has been approved"})
+                                "data": JSON.stringify({"From":adminemail,"To":merchantemail,"Body":"Your item "+itemname+" has been approved.", "Subject":"Your Item "+itemname+" has been approved."})
                             }
                             $.ajax(settings).done(function (response) {
                                 toastr.success("Email has been sent to the merchant","Success");

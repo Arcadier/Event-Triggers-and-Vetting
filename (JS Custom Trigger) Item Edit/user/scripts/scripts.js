@@ -108,7 +108,7 @@
                 "data": JSON.stringify(data),
                 success: function(){
                     toastr.success("Item submitted for approval", "Success");
-                    console.log(i_name)
+                    // console.log(i_name)
                     sendEmailToAdmin(m_email, m_name, admin_email, i_name);
                 }
             };
@@ -124,7 +124,7 @@
         }
 
         function sendEmailToAdmin(merchantemail, merchantname, adminemail, item_name){
-            console.log(item_name)
+            // console.log(item_name)
             var settings = {
                 "url": packagePath + "/sendemail.php",
                 "method": "POST",
