@@ -11,5 +11,6 @@ Custom Table name: edit_cache
 * "item" - string
 * "status" - Integer
 * "merchant" - string
+* "name" - string
 
 You can add names and change these names, but you'll have to edit the scripts accordingly.
