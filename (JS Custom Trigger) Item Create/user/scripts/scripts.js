@@ -9,6 +9,9 @@
         var token = getCookie('webapitoken');
         var merchantID = $("#userGuid").val();
         var state = false;
+        var m_email;
+        var m_name;
+        var admin_email = getadminemail();
         
 
         if($("body").hasClass("seller-upload-page")){
@@ -28,8 +31,9 @@
         }
 
         if($("body").hasClass("seller-items")){
+            getMerchantDetails(merchantID);
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/cache/",
+                "url": "http://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/cache/",
                 "method": "GET"
             };
               
@@ -39,7 +43,8 @@
                     if(element.status == 0 && element.merchant == merchantID){
                         var sync_item_id = element.item;
                         var row_id = element.Id;
-                        action(sync_item_id, row_id);
+                        var item_name = element.name;
+                        action(sync_item_id, row_id, item_name);
                     }
                 });
             });
@@ -47,9 +52,9 @@
 
         function saveItem(id, merchant){
             var status = false;
-
+            var itemName;
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/merchants/"+merchantID+"/items/"+id,
+                "url": "http://"+baseUrl+"/api/v2/merchants/"+merchantID+"/items/"+id,
                 "method": "PUT",
                 "async": false,
                 "headers": {
@@ -57,21 +62,22 @@
                     "Authorization": "Bearer " + token
                 },
                 "data": JSON.stringify({"IsAvailable": false, "IsVisibleToCustomer": false}),
-                success: function(){
+                success: function(response){
                     status = true;
+                    itemName = response.Name;
                 }
             };
                 
             $.ajax(settings);
 
             var cache_settings = {
-                "url": "https://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/cache/rows",
+                "url": "http://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/cache/rows",
                 "method": "POST",
                 "async": false,
                 "headers": {
                     "Content-Type": "application/json"
                 },
-                "data": JSON.stringify({"item":id, "status": 0, "merchant": merchant}),
+                "data": JSON.stringify({"item":id, "status": 0, "name": itemName, "merchant": merchant}),
             };
 
             $.ajax(cache_settings);
@@ -79,16 +85,16 @@
             return status;
         }
 
-        function action(item, row) {
-            update_cache_entry(row);
+        function action(item, row, name) {
+            update_cache_entry(row, name);
         }
 
-        function update_cache_entry(row){
+        function update_cache_entry(row, i_name){
             var data = {
                 "status": 1
             };
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/cache/rows/"+row,
+                "url": "http://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/cache/rows/"+row,
                 "method": "PUT",
                 "headers": {
                   "Content-Type": "application/json"
@@ -96,6 +102,7 @@
                 "data": JSON.stringify(data),
                 success: function(){
                     toastr.success("Item submitted for approval", "Success");
+                    sendEmailToAdmin(m_email, m_name, admin_email, i_name);
                 }
             };
             $.ajax(settings);
@@ -107,6 +114,46 @@
             if (parts.length === 2) {
                 return parts.pop().split(';').shift();
             }
+        }
+
+        function sendEmailToAdmin(merchantemail, merchantname, adminemail, item_name){
+            // console.log(item_name)
+            var settings = {
+                "url": packagePath + "/sendemail.php",
+                "method": "POST",
+                "async": false,
+                "data": JSON.stringify({"merchantemail": merchantemail, "merchantname":merchantname, "adminemail": adminemail, "name": item_name})
+            };
+            $.ajax(settings);
+        }
+
+        function getMerchantDetails(id){
+            var settings = {
+                "url": "http://"+baseUrl+"/api/v2/users/"+id,
+                "method": "GET",
+                "async": false
+            };
+            
+            $.ajax(settings).done(function (response) {
+                m_email = response.Email;
+                m_name = response.DisplayName;
+            });
+        }
+
+        function getadminemail(){
+            
+            var returnvariable ;
+            var settings = {
+                "url": "http://"+baseUrl+"/api/v2/marketplaces",
+                "method": "GET",
+                "timeout": 0,
+                "async":false
+              };
+              
+              $.ajax(settings).done(function (response) {
+                returnvariable = response.Owner.Email;
+              });
+              return returnvariable;
         }
     });
 })();
