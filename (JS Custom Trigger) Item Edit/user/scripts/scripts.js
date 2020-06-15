@@ -38,7 +38,7 @@
             getMerchantDetails(merchantID);
             
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/edit_cache/",
+                "url": "/api/v2/plugins/"+packageId+"/custom-tables/edit_cache/",
                 "method": "GET"
             };
               
@@ -59,7 +59,7 @@
             var status = false;
             var itemName;
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/merchants/"+merchantID+"/items/"+id,
+                "url": "/api/v2/merchants/"+merchantID+"/items/"+id,
                 "method": "PUT",
                 "async": false,
                 "headers": {
@@ -77,7 +77,7 @@
             $.ajax(settings);
 
             var cache_settings = {
-                "url": "https://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/edit_cache/rows",
+                "url": "/api/v2/plugins/"+packageId+"/custom-tables/edit_cache/rows",
                 "method": "POST",
                 "async": false,
                 "headers": {
@@ -100,7 +100,7 @@
                 "status": 1
             };
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/plugins/"+packageId+"/custom-tables/edit_cache/rows/"+row,
+                "url": "/api/v2/plugins/"+packageId+"/custom-tables/edit_cache/rows/"+row,
                 "method": "PUT",
                 "headers": {
                   "Content-Type": "application/json"
@@ -136,7 +136,7 @@
 
         function getMerchantDetails(id){
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/users/"+id,
+                "url": "/api/v2/users/"+id,
                 "method": "GET",
                 "async": false
             };
@@ -151,7 +151,7 @@
             
             var returnvariable ;
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/marketplaces",
+                "url": "/api/v2/marketplaces",
                 "method": "GET",
                 "timeout": 0,
                 "async":false

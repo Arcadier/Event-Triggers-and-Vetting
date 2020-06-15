@@ -14,7 +14,7 @@
         
         if($("body").hasClass("item-page")){
             var settings = {
-                "url": "https://"+baseUrl+"/api/v2/users/"+adminID,
+                "url": "/api/v2/users/"+adminID,
                 "method": "GET"
             };
             
@@ -31,7 +31,7 @@
                 toastr.info("Please wait", "Updating merchant");
                 var timer = setInterval(function(){
                     var settings = {
-                        "url": "https://"+baseUrl+"/api/v2/items/"+x,
+                        "url": "/api/v2/items/"+x,
                         "method": "GET",
                         "async": false
                     };
@@ -45,7 +45,7 @@
                     });
     
                     var settings = {
-                        "url": "https://"+baseUrl+"/api/v2/merchants/"+merchantID+"/items/"+x,
+                        "url": "/api/v2/merchants/"+merchantID+"/items/"+x,
                         "method": "PUT",
                         "async": false,
                         "headers": {
@@ -61,7 +61,7 @@
                         // console.log(itemname);
                         if(avail == true){
                             var settings = {
-                                "url": "https://"+baseUrl+"/api/v2/admins/"+adminID+"/emails",
+                                "url": "/api/v2/admins/"+adminID+"/emails",
                                 "method": "POST",
                                 "timeout": 0,
                                 "headers": {
