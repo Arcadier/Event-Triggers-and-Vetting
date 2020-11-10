@@ -1,7 +1,8 @@
 Event Triggers (API triggered)
 ===================
 
-* [How to access](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#how-to-access)
+* [How they work]()
+* [How to access event triggers from the admin portal](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#how-to-access)
 * [Connecting webhooks to Arcadier's event triggers](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#connecting-webhooks-to-arcadiers-event-triggers)
 * Events, Triggering APIs & Payload Samples
     * Invoices
@@ -35,8 +36,15 @@ Event Triggers (API triggered)
         * [user.address-updated](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-updated)
         * [user.address-deleted](https://github.com/Arcadier/Webhooks-Event-Triggers-and-Vetting/tree/master/(API)%20Event%20Trigger%20Hooks#user-address-is-deleted)
 
-        
-# How to access
+# How they work
+Marketplaces have many events happening at once across its pages and users. Those events might be an **item being created**, a **purchase just being completed** or a **user signing up**. Sometimes customizations, in the form of plug-ins or custom code, depend on the exact moment these events occur to perform a very specific task like:
+* notifying the buyers that a new item was created
+* notifying the admin that a new user registered
+* sending the amount of a transaction to a 3rd party loyalty points calculator.
+
+To enable this type of customizations, Arcadier provides event triggers which act as alerts that can be attached to your own webhooks or to Arcadier's own APIs. The events that Arcadier's event triggers support are listed below, as well as the triggering action.
+
+# How to access event triggers from the admin portal
 To access the Event Trigger Hooks Tool:
 1. Login to your marketplace's admin portal
 2. Navigate to `https://{your-marketplace}/admin/event-triggers/index`
