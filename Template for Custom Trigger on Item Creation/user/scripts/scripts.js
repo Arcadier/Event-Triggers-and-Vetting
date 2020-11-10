@@ -22,7 +22,7 @@
                     options.success = function(data, textStatus, jqXHR) {
                         if (data.Success) {
                             let itemId = data.Guid;
-                            state = saveItem(itemId, merchantID);
+                            state = customAction(itemId, merchantID);
                         }
                         if (typeof(success) === "function" && state) return success(data, textStatus, jqXHR);
                     };
@@ -50,37 +50,10 @@
             });
         }
 
-        function saveItem(id, merchant){
+        function customAction(id, merchant){
             var status = false;
-            var itemName;
-            var settings = {
-                "url": "/api/v2/merchants/"+merchantID+"/items/"+id,
-                "method": "PUT",
-                "async": false,
-                "headers": {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + token
-                },
-                "data": JSON.stringify({"IsAvailable": false, "IsVisibleToCustomer": false}),
-                success: function(response){
-                    status = true;
-                    itemName = response.Name;
-                }
-            };
-                
-            $.ajax(settings);
 
-            var cache_settings = {
-                "url": "/api/v2/plugins/"+packageId+"/custom-tables/cache/rows",
-                "method": "POST",
-                "async": false,
-                "headers": {
-                    "Content-Type": "application/json"
-                },
-                "data": JSON.stringify({"item":id, "status": 0, "name": itemName, "merchant": merchant}),
-            };
-
-            $.ajax(cache_settings);
+            //if your custom action is successful, set status to true
 
             return status;
         }
@@ -101,7 +74,6 @@
                 },
                 "data": JSON.stringify(data),
                 success: function(){
-                    toastr.success("Item submitted for approval", "Success");
                     sendEmailToAdmin(m_email, m_name, admin_email, i_name);
                 }
             };
