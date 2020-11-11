@@ -101,7 +101,7 @@
                 },
                 "data": JSON.stringify(data),
                 success: function(){
-                    // toastr.success("Item submitted for approval", "Success");
+                    toastr.success("Item submitted for approval", "Success");
                     sendEmailToAdmin(m_email, m_name, admin_email, i_name);
                 }
             };
